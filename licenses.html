@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使っている部品のライセンス｜うずAI工房</title>
+<meta name="description" content="うずAI工房（YouTube チャンネルを運営する人のための Windows アプリ）が使っている部品と、そのライセンスの一覧です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800;900&family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@600;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="img/icon.png">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+
+<header class="gut">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="img/icon.png" alt="">うずAI工房</a>
+    <nav class="top" aria-label="ページ">
+      <a href="index.html">ホーム</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="licenses.html" aria-current="page">ライセンス</a>
+      <a class="get" href="index.html#download">ダウンロード</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="docpage gut">
+  <div class="wrap"><div class="doc">
+    <section>
+      <h1>使っている部品のライセンス</h1>
+      <p>うずAI工房は、次の部品を使っています。アプリに含めているものと、初めて使うときに配布元から取ってくるものがあります。</p>
+    </section>
+    <div class="lic" role="list">
+      <div role="listitem"><span class="name">ffmpeg（動画の読み書き）</span><span class="kind">GPL</span><span class="how">アプリには含めず、初めて使うときに配布元（GitHub の gyan.dev のビルド、9.0.2 essentials）から取ってきます。取ったファイルは SHA-256 で確かめてから使います。</span></div>
+      <div role="listitem"><span class="name">uv（Python の用意）</span><span class="kind">MIT / Apache-2.0</span><span class="how">アプリに含めています。</span></div>
+      <div role="listitem"><span class="name">faster-whisper・CTranslate2（文字起こし）</span><span class="kind">MIT</span><span class="how">初めて使うときに取ってきます。</span></div>
+      <div role="listitem"><span class="name">Whisper のモデル（文字起こし）</span><span class="kind">MIT</span><span class="how">初めて使うときに取ってきます。</span></div>
+      <div role="listitem"><span class="name">アプリ本体が使う部品（Tauri・React など）</span><span class="kind">各種</span><span class="how">下の一覧をご覧ください。</span></div>
+    </div>
+    <section>
+      <h2>ffmpeg について</h2>
+      <p>ffmpeg は GPL（GNU General Public License バージョン 3）で配られているソフトウェアです。このアプリは ffmpeg を含めて配らず、別のプログラムとして呼び出して使います。</p>
+      <ul>
+        <li>取ってくるもの：<a href="https://github.com/GyanD/codexffmpeg/releases/tag/9.0.2" target="_blank" rel="noopener">GyanD/codexffmpeg 9.0.2（essentials）</a></li>
+        <li>配布元：<a href="https://www.gyan.dev/ffmpeg/builds/" target="_blank" rel="noopener">gyan.dev の FFmpeg のビルド</a></li>
+        <li>ライセンスの文：<a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GNU GPL v3</a>（取ってきたフォルダの <code>LICENSE</code> にも入っています）</li>
+        <li>ffmpeg そのものの説明：<a href="https://ffmpeg.org/legal.html" target="_blank" rel="noopener">FFmpeg License and Legal Considerations</a></li>
+      </ul>
+    </section>
+  </div>
+  <section id="third-party">
+    <h2>アプリ本体が使う部品</h2>
+<p>アプリ本体は、次の部品を使っています（Rust のクレート 305 個、npm のパッケージ 5 個）。それぞれのライセンスの文は、各部品の配布元にあります。</p>
+<details class="tp">
+  <summary><span class="tp-lic">MIT OR Apache-2.0</span><span class="tp-count">147 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/tauri-apps/plugins-workspace" target="_blank" rel="noopener">@tauri-apps/plugin-opener</a> <span class="tp-ver">2.7.2</span></li>
+    <li><a href="https://github.com/dtolnay/anyhow" target="_blank" rel="noopener">anyhow</a> <span class="tp-ver">1.0.104</span></li>
+    <li><a href="https://github.com/marshallpierce/rust-base64" target="_blank" rel="noopener">base64</a> <span class="tp-ver">0.22.1</span></li>
+    <li><a href="https://github.com/marshallpierce/rust-base64" target="_blank" rel="noopener">base64</a> <span class="tp-ver">0.23.1</span></li>
+    <li><a href="https://github.com/bitflags/bitflags" target="_blank" rel="noopener">bitflags</a> <span class="tp-ver">2.13.2</span></li>
+    <li><a href="https://github.com/RustCrypto/utils" target="_blank" rel="noopener">block-buffer</a> <span class="tp-ver">0.10.4</span></li>
+    <li><a href="https://github.com/camino-rs/camino" target="_blank" rel="noopener">camino</a> <span class="tp-ver">1.2.6</span></li>
+    <li><a href="https://github.com/rust-lang/cargo" target="_blank" rel="noopener">cargo-platform</a> <span class="tp-ver">0.1.9</span></li>
+    <li><a href="https://github.com/rust-lang/cfg-if" target="_blank" rel="noopener">cfg-if</a> <span class="tp-ver">1.0.5</span></li>
+    <li><a href="https://github.com/chronotope/chrono" target="_blank" rel="noopener">chrono</a> <span class="tp-ver">0.4.45</span></li>
+    <li><a href="https://github.com/chronotope/chrono-tz" target="_blank" rel="noopener">chrono-tz</a> <span class="tp-ver">0.10.4</span></li>
+    <li><a href="https://github.com/SergioBenitez/cookie-rs" target="_blank" rel="noopener">cookie</a> <span class="tp-ver">0.18.2</span></li>
+    <li><a href="https://github.com/RustCrypto/utils" target="_blank" rel="noopener">cpufeatures</a> <span class="tp-ver">0.2.17</span></li>
+    <li><a href="https://github.com/srijs/rust-crc32fast" target="_blank" rel="noopener">crc32fast</a> <span class="tp-ver">1.5.3</span></li>
+    <li><a href="https://github.com/crossbeam-rs/crossbeam" target="_blank" rel="noopener">crossbeam-channel</a> <span class="tp-ver">0.5.17</span></li>
+    <li><a href="https://github.com/crossbeam-rs/crossbeam" target="_blank" rel="noopener">crossbeam-utils</a> <span class="tp-ver">0.8.23</span></li>
+    <li><a href="https://github.com/RustCrypto/traits" target="_blank" rel="noopener">crypto-common</a> <span class="tp-ver">0.1.7</span></li>
+    <li><a href="https://github.com/knurling-rs/defmt" target="_blank" rel="noopener">defmt</a> <span class="tp-ver">1.2.0</span></li>
+    <li><a href="https://github.com/knurling-rs/defmt" target="_blank" rel="noopener">defmt-macros</a> <span class="tp-ver">1.2.0</span></li>
+    <li><a href="https://github.com/knurling-rs/defmt" target="_blank" rel="noopener">defmt-parser</a> <span class="tp-ver">1.1.0</span></li>
+    <li><a href="https://github.com/jhpratt/deranged" target="_blank" rel="noopener">deranged</a> <span class="tp-ver">0.5.9</span></li>
+    <li><a href="https://github.com/RustCrypto/traits" target="_blank" rel="noopener">digest</a> <span class="tp-ver">0.10.7</span></li>
+    <li><a href="https://github.com/soc/dirs-rs" target="_blank" rel="noopener">dirs</a> <span class="tp-ver">6.0.0</span></li>
+    <li><a href="https://codeberg.org/dirs/dirs-rs" target="_blank" rel="noopener">dirs</a> <span class="tp-ver">7.0.0</span></li>
+    <li><a href="https://github.com/dirs-dev/dirs-sys-rs" target="_blank" rel="noopener">dirs-sys</a> <span class="tp-ver">0.5.0</span></li>
+    <li><a href="https://github.com/yaahc/displaydoc" target="_blank" rel="noopener">displaydoc</a> <span class="tp-ver">0.2.7</span></li>
+    <li><a href="https://github.com/dtolnay/dtoa" target="_blank" rel="noopener">dtoa</a> <span class="tp-ver">1.0.11</span></li>
+    <li><a href="https://github.com/dtolnay/dyn-clone" target="_blank" rel="noopener">dyn-clone</a> <span class="tp-ver">1.0.20</span></li>
+    <li><a href="https://github.com/dtolnay/erased-serde" target="_blank" rel="noopener">erased-serde</a> <span class="tp-ver">0.4.10</span></li>
+    <li><a href="https://github.com/image-rs/fdeflate" target="_blank" rel="noopener">fdeflate</a> <span class="tp-ver">0.3.7</span></li>
+    <li><a href="https://github.com/rust-lang/flate2-rs" target="_blank" rel="noopener">flate2</a> <span class="tp-ver">1.1.10</span></li>
+    <li><a href="https://github.com/servo/rust-url" target="_blank" rel="noopener">form_urlencoded</a> <span class="tp-ver">1.2.2</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-channel</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-core</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-executor</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-io</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-macro</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-sink</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-task</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-lang/futures-rs" target="_blank" rel="noopener">futures-util</a> <span class="tp-ver">0.3.34</span></li>
+    <li><a href="https://github.com/rust-random/getrandom" target="_blank" rel="noopener">getrandom</a> <span class="tp-ver">0.3.4</span></li>
+    <li><a href="https://github.com/rust-lang/glob" target="_blank" rel="noopener">glob</a> <span class="tp-ver">0.3.4</span></li>
+    <li><a href="https://github.com/rust-lang/hashbrown" target="_blank" rel="noopener">hashbrown</a> <span class="tp-ver">0.12.3</span></li>
+    <li><a href="https://github.com/rust-lang/hashbrown" target="_blank" rel="noopener">hashbrown</a> <span class="tp-ver">0.15.5</span></li>
+    <li><a href="https://github.com/rust-lang/hashbrown" target="_blank" rel="noopener">hashbrown</a> <span class="tp-ver">0.17.1</span></li>
+    <li><a href="https://github.com/kyren/hashlink" target="_blank" rel="noopener">hashlink</a> <span class="tp-ver">0.10.0</span></li>
+    <li><a href="https://github.com/withoutboats/heck" target="_blank" rel="noopener">heck</a> <span class="tp-ver">0.5.0</span></li>
+    <li><a href="https://github.com/KokaKiwi/rust-hex" target="_blank" rel="noopener">hex</a> <span class="tp-ver">0.4.3</span></li>
+    <li><a href="https://github.com/servo/html5ever" target="_blank" rel="noopener">html5ever</a> <span class="tp-ver">0.39.0</span></li>
+    <li><a href="https://github.com/hyperium/http" target="_blank" rel="noopener">http</a> <span class="tp-ver">1.5.0</span></li>
+    <li><a href="https://github.com/servo/rust-url" target="_blank" rel="noopener">idna</a> <span class="tp-ver">1.1.0</span></li>
+    <li><a href="https://github.com/dtolnay/itoa" target="_blank" rel="noopener">itoa</a> <span class="tp-ver">1.0.18</span></li>
+    <li><a href="https://github.com/chanced/jsonptr" target="_blank" rel="noopener">jsonptr</a> <span class="tp-ver">0.7.1</span></li>
+    <li><a href="https://github.com/rust-windowing/keyboard-types" target="_blank" rel="noopener">keyboard-types</a> <span class="tp-ver">0.8.3</span></li>
+    <li><a href="https://github.com/hwchen/keyring-rs" target="_blank" rel="noopener">keyring</a> <span class="tp-ver">3.6.3</span></li>
+    <li><a href="https://github.com/rust-lang/libc" target="_blank" rel="noopener">libc</a> <span class="tp-ver">0.2.191</span></li>
+    <li><a href="https://github.com/Amanieu/parking_lot" target="_blank" rel="noopener">lock_api</a> <span class="tp-ver">0.4.14</span></li>
+    <li><a href="https://github.com/rust-lang/log" target="_blank" rel="noopener">log</a> <span class="tp-ver">0.4.34</span></li>
+    <li><a href="https://github.com/servo/html5ever" target="_blank" rel="noopener">markup5ever</a> <span class="tp-ver">0.39.0</span></li>
+    <li><a href="https://github.com/hyperium/mime" target="_blank" rel="noopener">mime</a> <span class="tp-ver">0.3.17</span></li>
+    <li><a href="https://github.com/jhpratt/num-conv" target="_blank" rel="noopener">num-conv</a> <span class="tp-ver">0.2.2</span></li>
+    <li><a href="https://github.com/rust-num/num-traits" target="_blank" rel="noopener">num-traits</a> <span class="tp-ver">0.2.19</span></li>
+    <li><a href="https://github.com/matklad/once_cell" target="_blank" rel="noopener">once_cell</a> <span class="tp-ver">1.21.4</span></li>
+    <li><a href="https://github.com/Amanieu/parking_lot" target="_blank" rel="noopener">parking_lot</a> <span class="tp-ver">0.12.5</span></li>
+    <li><a href="https://github.com/Amanieu/parking_lot" target="_blank" rel="noopener">parking_lot_core</a> <span class="tp-ver">0.9.12</span></li>
+    <li><a href="https://github.com/as1100k/pastey" target="_blank" rel="noopener">pastey</a> <span class="tp-ver">0.2.3</span></li>
+    <li><a href="https://github.com/servo/rust-url" target="_blank" rel="noopener">percent-encoding</a> <span class="tp-ver">2.3.2</span></li>
+    <li><a href="https://github.com/image-rs/image-png" target="_blank" rel="noopener">png</a> <span class="tp-ver">0.17.16</span></li>
+    <li><a href="https://github.com/image-rs/image-png" target="_blank" rel="noopener">png</a> <span class="tp-ver">0.18.1</span></li>
+    <li><a href="https://github.com/jhpratt/powerfmt" target="_blank" rel="noopener">powerfmt</a> <span class="tp-ver">0.2.1</span></li>
+    <li><a href="https://github.com/cryptocorrosion/cryptocorrosion" target="_blank" rel="noopener">ppv-lite86</a> <span class="tp-ver">0.2.21</span></li>
+    <li><a href="https://github.com/dtolnay/proc-macro2" target="_blank" rel="noopener">proc-macro2</a> <span class="tp-ver">1.0.107</span></li>
+    <li><a href="https://github.com/dtolnay/quote" target="_blank" rel="noopener">quote</a> <span class="tp-ver">1.0.47</span></li>
+    <li><a href="https://github.com/rust-random/rand" target="_blank" rel="noopener">rand</a> <span class="tp-ver">0.9.5</span></li>
+    <li><a href="https://github.com/rust-random/rand" target="_blank" rel="noopener">rand_chacha</a> <span class="tp-ver">0.9.0</span></li>
+    <li><a href="https://github.com/rust-random/rand" target="_blank" rel="noopener">rand_core</a> <span class="tp-ver">0.9.5</span></li>
+    <li><a href="https://github.com/dtolnay/ref-cast" target="_blank" rel="noopener">ref-cast</a> <span class="tp-ver">1.0.27</span></li>
+    <li><a href="https://github.com/dtolnay/ref-cast" target="_blank" rel="noopener">ref-cast-impl</a> <span class="tp-ver">1.0.27</span></li>
+    <li><a href="https://github.com/rust-lang/regex" target="_blank" rel="noopener">regex</a> <span class="tp-ver">1.13.1</span></li>
+    <li><a href="https://github.com/rust-lang/regex" target="_blank" rel="noopener">regex-automata</a> <span class="tp-ver">0.4.18</span></li>
+    <li><a href="https://github.com/rust-lang/regex" target="_blank" rel="noopener">regex-syntax</a> <span class="tp-ver">0.8.11</span></li>
+    <li><a href="https://github.com/seanmonstar/reqwest" target="_blank" rel="noopener">reqwest</a> <span class="tp-ver">0.12.28</span></li>
+    <li><a href="https://github.com/bluss/scopeguard" target="_blank" rel="noopener">scopeguard</a> <span class="tp-ver">1.2.0</span></li>
+    <li><a href="https://github.com/dtolnay/semver" target="_blank" rel="noopener">semver</a> <span class="tp-ver">1.0.28</span></li>
+    <li><a href="https://github.com/serde-rs/serde" target="_blank" rel="noopener">serde</a> <span class="tp-ver">1.0.229</span></li>
+    <li><a href="https://github.com/serde-rs/serde" target="_blank" rel="noopener">serde_core</a> <span class="tp-ver">1.0.229</span></li>
+    <li><a href="https://github.com/serde-rs/serde" target="_blank" rel="noopener">serde_derive</a> <span class="tp-ver">1.0.229</span></li>
+    <li><a href="https://github.com/serde-rs/serde" target="_blank" rel="noopener">serde_derive_internals</a> <span class="tp-ver">0.29.1</span></li>
+    <li><a href="https://github.com/serde-rs/serde" target="_blank" rel="noopener">serde_derive_internals</a> <span class="tp-ver">0.30.0</span></li>
+    <li><a href="https://github.com/serde-rs/json" target="_blank" rel="noopener">serde_json</a> <span class="tp-ver">1.0.154</span></li>
+    <li><a href="https://github.com/dtolnay/serde-repr" target="_blank" rel="noopener">serde_repr</a> <span class="tp-ver">0.1.21</span></li>
+    <li><a href="https://github.com/toml-rs/toml" target="_blank" rel="noopener">serde_spanned</a> <span class="tp-ver">1.1.2</span></li>
+    <li><a href="https://github.com/jonasbb/serde_with" target="_blank" rel="noopener">serde_with</a> <span class="tp-ver">3.24.0</span></li>
+    <li><a href="https://github.com/jonasbb/serde_with" target="_blank" rel="noopener">serde_with_macros</a> <span class="tp-ver">3.24.0</span></li>
+    <li><a href="https://github.com/dtolnay/serde-untagged" target="_blank" rel="noopener">serde-untagged</a> <span class="tp-ver">0.1.9</span></li>
+    <li><a href="https://github.com/chippers/serialize-to-javascript" target="_blank" rel="noopener">serialize-to-javascript</a> <span class="tp-ver">0.1.2</span></li>
+    <li><a href="https://github.com/chippers/serialize-to-javascript" target="_blank" rel="noopener">serialize-to-javascript-impl</a> <span class="tp-ver">0.1.2</span></li>
+    <li><a href="https://github.com/servo/stylo" target="_blank" rel="noopener">servo_arc</a> <span class="tp-ver">0.4.3</span></li>
+    <li><a href="https://github.com/RustCrypto/hashes" target="_blank" rel="noopener">sha2</a> <span class="tp-ver">0.10.9</span></li>
+    <li><a href="https://github.com/jedisct1/rust-siphash" target="_blank" rel="noopener">siphasher</a> <span class="tp-ver">1.0.4</span></li>
+    <li><a href="https://github.com/servo/rust-smallvec" target="_blank" rel="noopener">smallvec</a> <span class="tp-ver">1.16.3</span></li>
+    <li><a href="https://github.com/rust-windowing/softbuffer" target="_blank" rel="noopener">softbuffer</a> <span class="tp-ver">0.4.8</span></li>
+    <li><a href="https://github.com/storyyeller/stable_deref_trait" target="_blank" rel="noopener">stable_deref_trait</a> <span class="tp-ver">1.2.1</span></li>
+    <li><a href="https://github.com/servo/string-cache" target="_blank" rel="noopener">string_cache</a> <span class="tp-ver">0.9.0</span></li>
+    <li><a href="https://github.com/dtolnay/syn" target="_blank" rel="noopener">syn</a> <span class="tp-ver">2.0.119</span></li>
+    <li><a href="https://github.com/dtolnay/syn" target="_blank" rel="noopener">syn</a> <span class="tp-ver">3.0.9</span></li>
+    <li><a href="https://github.com/servo/html5ever" target="_blank" rel="noopener">tendril</a> <span class="tp-ver">0.5.1</span></li>
+    <li><a href="https://github.com/dtolnay/thiserror" target="_blank" rel="noopener">thiserror</a> <span class="tp-ver">2.0.21</span></li>
+    <li><a href="https://github.com/dtolnay/thiserror" target="_blank" rel="noopener">thiserror-impl</a> <span class="tp-ver">2.0.21</span></li>
+    <li><a href="https://github.com/time-rs/time" target="_blank" rel="noopener">time</a> <span class="tp-ver">0.3.55</span></li>
+    <li><a href="https://github.com/time-rs/time" target="_blank" rel="noopener">time-core</a> <span class="tp-ver">0.1.9</span></li>
+    <li><a href="https://github.com/time-rs/time" target="_blank" rel="noopener">time-macros</a> <span class="tp-ver">0.2.32</span></li>
+    <li><a href="https://github.com/toml-rs/toml" target="_blank" rel="noopener">toml</a> <span class="tp-ver">1.1.8+spec-1.1.0</span></li>
+    <li><a href="https://github.com/toml-rs/toml" target="_blank" rel="noopener">toml_datetime</a> <span class="tp-ver">1.1.2+spec-1.1.0</span></li>
+    <li><a href="https://github.com/toml-rs/toml" target="_blank" rel="noopener">toml_parser</a> <span class="tp-ver">1.1.5+spec-1.1.0</span></li>
+    <li><a href="https://github.com/toml-rs/toml" target="_blank" rel="noopener">toml_writer</a> <span class="tp-ver">1.1.3+spec-1.1.0</span></li>
+    <li><a href="https://github.com/tauri-apps/tray-icon" target="_blank" rel="noopener">tray-icon</a> <span class="tp-ver">0.25.1</span></li>
+    <li><a href="https://github.com/dtolnay/typeid" target="_blank" rel="noopener">typeid</a> <span class="tp-ver">1.0.3</span></li>
+    <li><a href="https://github.com/paholg/typenum" target="_blank" rel="noopener">typenum</a> <span class="tp-ver">1.20.1</span></li>
+    <li><a href="https://github.com/unicode-rs/unicode-segmentation" target="_blank" rel="noopener">unicode-segmentation</a> <span class="tp-ver">1.13.3</span></li>
+    <li><a href="https://github.com/servo/rust-url" target="_blank" rel="noopener">url</a> <span class="tp-ver">2.5.8</span></li>
+    <li><a href="https://github.com/servo/html5ever" target="_blank" rel="noopener">web_atoms</a> <span class="tp-ver">0.2.6</span></li>
+    <li><a href="https://github.com/daxpedda/web-time" target="_blank" rel="noopener">web-time</a> <span class="tp-ver">1.1.0</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows</a> <span class="tp-ver">0.62.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_aarch64_gnullvm</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_aarch64_msvc</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_i686_gnu</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_i686_gnullvm</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_i686_msvc</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_x86_64_gnu</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_x86_64_gnullvm</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows_x86_64_msvc</a> <span class="tp-ver">0.53.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-collections</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-core</a> <span class="tp-ver">0.62.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-future</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-implement</a> <span class="tp-ver">0.60.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-interface</a> <span class="tp-ver">0.59.3</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-link</a> <span class="tp-ver">0.2.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-numerics</a> <span class="tp-ver">0.3.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-result</a> <span class="tp-ver">0.4.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-strings</a> <span class="tp-ver">0.5.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-sys</a> <span class="tp-ver">0.60.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-sys</a> <span class="tp-ver">0.61.2</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-targets</a> <span class="tp-ver">0.53.5</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-threading</a> <span class="tp-ver">0.2.1</span></li>
+    <li><a href="https://github.com/microsoft/windows-rs" target="_blank" rel="noopener">windows-version</a> <span class="tp-ver">0.1.7</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MIT</span><span class="tp-count">60 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">block2</a> <span class="tp-ver">0.6.2</span></li>
+    <li><a href="https://github.com/tokio-rs/bytes" target="_blank" rel="noopener">bytes</a> <span class="tp-ver">1.12.1</span></li>
+    <li><a href="https://github.com/oli-obk/cargo_metadata" target="_blank" rel="noopener">cargo_metadata</a> <span class="tp-ver">0.19.2</span></li>
+    <li><a href="https://github.com/mdsteele/rust-cfb" target="_blank" rel="noopener">cfb</a> <span class="tp-ver">0.14.0</span></li>
+    <li><a href="https://github.com/TedDriggs/darling" target="_blank" rel="noopener">darling</a> <span class="tp-ver">0.24.1</span></li>
+    <li><a href="https://github.com/TedDriggs/darling" target="_blank" rel="noopener">darling_core</a> <span class="tp-ver">0.24.1</span></li>
+    <li><a href="https://github.com/TedDriggs/darling" target="_blank" rel="noopener">darling_macro</a> <span class="tp-ver">0.24.1</span></li>
+    <li><a href="https://github.com/JelteF/derive_more" target="_blank" rel="noopener">derive_more</a> <span class="tp-ver">2.1.1</span></li>
+    <li><a href="https://github.com/JelteF/derive_more" target="_blank" rel="noopener">derive_more-impl</a> <span class="tp-ver">2.1.1</span></li>
+    <li><a href="https://github.com/niklak/dom_query" target="_blank" rel="noopener">dom_query</a> <span class="tp-ver">0.28.0</span></li>
+    <li><a href="https://github.com/fizyk20/generic-array" target="_blank" rel="noopener">generic-array</a> <span class="tp-ver">0.14.7</span></li>
+    <li><a href="https://github.com/bancek/rust-http-range" target="_blank" rel="noopener">http-range</a> <span class="tp-ver">0.1.6</span></li>
+    <li><a href="https://github.com/mdsteele/rust-ico" target="_blank" rel="noopener">ico</a> <span class="tp-ver">0.5.0</span></li>
+    <li><a href="https://github.com/bojand/infer" target="_blank" rel="noopener">infer</a> <span class="tp-ver">0.22.0</span></li>
+    <li><a href="https://gitlab.redox-os.org/redox-os/libredox" target="_blank" rel="noopener">libredox</a> <span class="tp-ver">0.1.25</span></li>
+    <li><a href="https://github.com/rusqlite/rusqlite" target="_blank" rel="noopener">libsqlite3-sys</a> <span class="tp-ver">0.35.0</span></li>
+    <li><a href="https://github.com/tokio-rs/mio" target="_blank" rel="noopener">mio</a> <span class="tp-ver">1.2.4</span></li>
+    <li><a href="https://github.com/mbrubeck/rust-debug-unreachable" target="_blank" rel="noopener">new_debug_unreachable</a> <span class="tp-ver">1.0.6</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2</a> <span class="tp-ver">0.6.5</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-encode</a> <span class="tp-ver">4.1.0</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-foundation</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/Byron/open-rs" target="_blank" rel="noopener">open</a> <span class="tp-ver">5.4.4</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf</a> <span class="tp-ver">0.12.1</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf</a> <span class="tp-ver">0.13.1</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf_generator</a> <span class="tp-ver">0.13.1</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf_macros</a> <span class="tp-ver">0.13.1</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf_shared</a> <span class="tp-ver">0.12.1</span></li>
+    <li><a href="https://github.com/rust-phf/rust-phf" target="_blank" rel="noopener">phf_shared</a> <span class="tp-ver">0.13.1</span></li>
+    <li><a href="https://github.com/ebarnard/rust-plist" target="_blank" rel="noopener">plist</a> <span class="tp-ver">1.10.2</span></li>
+    <li><a href="https://github.com/emilio/precomputed-hash" target="_blank" rel="noopener">precomputed-hash</a> <span class="tp-ver">0.1.1</span></li>
+    <li><a href="https://github.com/tafia/quick-xml" target="_blank" rel="noopener">quick-xml</a> <span class="tp-ver">0.42.0</span></li>
+    <li><a href="https://github.com/react/react" target="_blank" rel="noopener">react</a> <span class="tp-ver">19.3.1</span></li>
+    <li><a href="https://github.com/react/react" target="_blank" rel="noopener">react-dom</a> <span class="tp-ver">19.3.1</span></li>
+    <li><a href="https://gitlab.redox-os.org/redox-os/syscall" target="_blank" rel="noopener">redox_syscall</a> <span class="tp-ver">0.5.18</span></li>
+    <li><a href="https://gitlab.redox-os.org/redox-os/users" target="_blank" rel="noopener">redox_users</a> <span class="tp-ver">0.5.3</span></li>
+    <li><a href="https://github.com/PolyMeilex/rfd" target="_blank" rel="noopener">rfd</a> <span class="tp-ver">0.16.1</span></li>
+    <li><a href="https://github.com/rusqlite/rusqlite" target="_blank" rel="noopener">rusqlite</a> <span class="tp-ver">0.37.0</span></li>
+    <li><a href="https://github.com/react/react" target="_blank" rel="noopener">scheduler</a> <span class="tp-ver">0.28.0</span></li>
+    <li><a href="https://github.com/GREsau/schemars" target="_blank" rel="noopener">schemars</a> <span class="tp-ver">0.8.22</span></li>
+    <li><a href="https://github.com/GREsau/schemars" target="_blank" rel="noopener">schemars</a> <span class="tp-ver">0.9.0</span></li>
+    <li><a href="https://github.com/GREsau/schemars" target="_blank" rel="noopener">schemars</a> <span class="tp-ver">1.2.3</span></li>
+    <li><a href="https://github.com/GREsau/schemars" target="_blank" rel="noopener">schemars_derive</a> <span class="tp-ver">0.8.22</span></li>
+    <li><a href="https://github.com/GREsau/schemars" target="_blank" rel="noopener">schemars_derive</a> <span class="tp-ver">1.2.3</span></li>
+    <li><a href="https://github.com/mcountryman/simd-adler32" target="_blank" rel="noopener">simd-adler32</a> <span class="tp-ver">0.3.10</span></li>
+    <li><a href="https://github.com/tokio-rs/slab" target="_blank" rel="noopener">slab</a> <span class="tp-ver">0.4.12</span></li>
+    <li><a href="https://github.com/rapidfuzz/strsim-rs" target="_blank" rel="noopener">strsim</a> <span class="tp-ver">0.11.1</span></li>
+    <li><a href="https://github.com/mystor/synstructure" target="_blank" rel="noopener">synstructure</a> <span class="tp-ver">0.14.0</span></li>
+    <li><a href="https://github.com/tokio-rs/tokio" target="_blank" rel="noopener">tokio</a> <span class="tp-ver">1.54.0</span></li>
+    <li><a href="https://github.com/tokio-rs/tokio" target="_blank" rel="noopener">tokio-macros</a> <span class="tp-ver">2.7.2</span></li>
+    <li><a href="https://github.com/tokio-rs/tokio" target="_blank" rel="noopener">tokio-stream</a> <span class="tp-ver">0.1.19</span></li>
+    <li><a href="https://github.com/tokio-rs/tokio" target="_blank" rel="noopener">tokio-util</a> <span class="tp-ver">0.7.20</span></li>
+    <li><a href="https://github.com/tokio-rs/tracing" target="_blank" rel="noopener">tracing</a> <span class="tp-ver">0.1.44</span></li>
+    <li><a href="https://github.com/tokio-rs/tracing" target="_blank" rel="noopener">tracing-attributes</a> <span class="tp-ver">0.1.31</span></li>
+    <li><a href="https://github.com/tokio-rs/tracing" target="_blank" rel="noopener">tracing-core</a> <span class="tp-ver">0.1.36</span></li>
+    <li><a href="https://github.com/denoland/rust-urlpattern" target="_blank" rel="noopener">urlpattern</a> <span class="tp-ver">0.6.0</span></li>
+    <li><a href="https://github.com/wravery/webview2-rs" target="_blank" rel="noopener">webview2-com</a> <span class="tp-ver">0.39.1</span></li>
+    <li><a href="https://github.com/wravery/webview2-rs" target="_blank" rel="noopener">webview2-com-macros</a> <span class="tp-ver">0.8.1</span></li>
+    <li><a href="https://github.com/wravery/webview2-rs" target="_blank" rel="noopener">webview2-com-sys</a> <span class="tp-ver">0.39.1</span></li>
+    <li><a href="https://github.com/winnow-rs/winnow" target="_blank" rel="noopener">winnow</a> <span class="tp-ver">1.0.4</span></li>
+    <li><a href="https://github.com/dtolnay/zmij" target="_blank" rel="noopener">zmij</a> <span class="tp-ver">1.0.23</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0 OR MIT</span><span class="tp-count">29 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">@tauri-apps/api</a> <span class="tp-ver">2.12.4</span></li>
+    <li><a href="https://github.com/contain-rs/bit-set" target="_blank" rel="noopener">bit-set</a> <span class="tp-ver">0.8.0</span></li>
+    <li><a href="https://github.com/contain-rs/bit-vec" target="_blank" rel="noopener">bit-vec</a> <span class="tp-ver">0.8.0</span></li>
+    <li><a href="https://github.com/mmastrac/linktime" target="_blank" rel="noopener">ctor</a> <span class="tp-ver">1.0.13</span></li>
+    <li><a href="https://github.com/indexmap-rs/equivalent" target="_blank" rel="noopener">equivalent</a> <span class="tp-ver">1.0.3</span></li>
+    <li><a href="https://github.com/smol-rs/fastrand" target="_blank" rel="noopener">fastrand</a> <span class="tp-ver">2.5.0</span></li>
+    <li><a href="https://github.com/hsivonen/idna_adapter" target="_blank" rel="noopener">idna_adapter</a> <span class="tp-ver">1.2.2</span></li>
+    <li><a href="https://github.com/bluss/indexmap" target="_blank" rel="noopener">indexmap</a> <span class="tp-ver">1.9.3</span></li>
+    <li><a href="https://github.com/indexmap-rs/indexmap" target="_blank" rel="noopener">indexmap</a> <span class="tp-ver">2.14.2</span></li>
+    <li><a href="https://github.com/tauri-apps/muda" target="_blank" rel="noopener">muda</a> <span class="tp-ver">0.20.0</span></li>
+    <li><a href="https://github.com/taiki-e/pin-project-lite" target="_blank" rel="noopener">pin-project-lite</a> <span class="tp-ver">0.2.17</span></li>
+    <li><a href="https://github.com/taiki-e/portable-atomic" target="_blank" rel="noopener">portable-atomic</a> <span class="tp-ver">1.15.0</span></li>
+    <li><a href="https://github.com/taiki-e/portable-atomic-util" target="_blank" rel="noopener">portable-atomic-util</a> <span class="tp-ver">0.2.8</span></li>
+    <li><a href="https://github.com/rust-lang/rustc-hash" target="_blank" rel="noopener">rustc-hash</a> <span class="tp-ver">2.1.3</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri</a> <span class="tp-ver">2.12.4</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri-codegen</a> <span class="tp-ver">2.7.3</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri-macros</a> <span class="tp-ver">2.7.3</span></li>
+    <li><a href="https://github.com/tauri-apps/plugins-workspace" target="_blank" rel="noopener">tauri-plugin-dialog</a> <span class="tp-ver">2.8.3</span></li>
+    <li><a href="https://github.com/tauri-apps/plugins-workspace" target="_blank" rel="noopener">tauri-plugin-fs</a> <span class="tp-ver">2.7.1</span></li>
+    <li><a href="https://github.com/tauri-apps/plugins-workspace" target="_blank" rel="noopener">tauri-plugin-opener</a> <span class="tp-ver">2.7.2</span></li>
+    <li><a href="https://github.com/tauri-apps/plugins-workspace" target="_blank" rel="noopener">tauri-plugin-single-instance</a> <span class="tp-ver">2.5.4</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri-runtime</a> <span class="tp-ver">2.12.2</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri-runtime-wry</a> <span class="tp-ver">2.12.2</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener">tauri-utils</a> <span class="tp-ver">2.10.2</span></li>
+    <li><a href="https://github.com/hsivonen/utf8_iter" target="_blank" rel="noopener">utf8_iter</a> <span class="tp-ver">1.0.4</span></li>
+    <li><a href="https://github.com/uuid-rs/uuid" target="_blank" rel="noopener">uuid</a> <span class="tp-ver">1.28.0</span></li>
+    <li><a href="https://github.com/tauri-apps/tauri-plugin-vibrancy" target="_blank" rel="noopener">window-vibrancy</a> <span class="tp-ver">0.8.1</span></li>
+    <li><a href="https://github.com/tauri-apps/wry" target="_blank" rel="noopener">wry</a> <span class="tp-ver">0.57.0</span></li>
+    <li><a href="https://github.com/RustCrypto/utils" target="_blank" rel="noopener">zeroize</a> <span class="tp-ver">1.9.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Unicode-3.0</span><span class="tp-count">18 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_collections</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_locale_core</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_normalizer</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_normalizer_data</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_properties</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_properties_data</a> <span class="tp-ver">2.3.0</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">icu_provider</a> <span class="tp-ver">2.3.1</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">litemap</a> <span class="tp-ver">0.8.3</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">potential_utf</a> <span class="tp-ver">0.1.6</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">tinystr</a> <span class="tp-ver">0.8.4</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">writeable</a> <span class="tp-ver">0.6.4</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">yoke</a> <span class="tp-ver">0.8.3</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">yoke-derive</a> <span class="tp-ver">0.8.4</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">zerofrom</a> <span class="tp-ver">0.1.8</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">zerofrom-derive</a> <span class="tp-ver">0.1.8</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">zerotrie</a> <span class="tp-ver">0.2.5</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">zerovec</a> <span class="tp-ver">0.11.8</span></li>
+    <li><a href="https://github.com/unicode-org/icu4x" target="_blank" rel="noopener">zerovec-derive</a> <span class="tp-ver">0.11.6</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Unlicense OR MIT</span><span class="tp-count">9 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/BurntSushi/aho-corasick" target="_blank" rel="noopener">aho-corasick</a> <span class="tp-ver">1.1.5</span></li>
+    <li><a href="https://github.com/BurntSushi/byteorder" target="_blank" rel="noopener">byteorder</a> <span class="tp-ver">1.5.0</span></li>
+    <li><a href="https://github.com/BurntSushi/jiff" target="_blank" rel="noopener">jiff</a> <span class="tp-ver">0.2.38</span></li>
+    <li><a href="https://github.com/BurntSushi/jiff" target="_blank" rel="noopener">jiff-core</a> <span class="tp-ver">0.1.1</span></li>
+    <li><a href="https://github.com/BurntSushi/jiff" target="_blank" rel="noopener">jiff-static</a> <span class="tp-ver">0.2.38</span></li>
+    <li><a href="https://github.com/BurntSushi/jiff" target="_blank" rel="noopener">jiff-tzdb</a> <span class="tp-ver">0.1.9</span></li>
+    <li><a href="https://github.com/BurntSushi/jiff" target="_blank" rel="noopener">jiff-tzdb-platform</a> <span class="tp-ver">0.1.3</span></li>
+    <li><a href="https://github.com/BurntSushi/memchr" target="_blank" rel="noopener">memchr</a> <span class="tp-ver">2.8.3</span></li>
+    <li><a href="https://github.com/BurntSushi/winapi-util" target="_blank" rel="noopener">winapi-util</a> <span class="tp-ver">0.1.11</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Zlib OR Apache-2.0 OR MIT</span><span class="tp-count">8 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">dispatch2</a> <span class="tp-ver">0.3.1</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-core-foundation</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-core-graphics</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-exception-helper</a> <span class="tp-ver">0.1.1</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-io-surface</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-quartz-core</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/madsmtm/objc2" target="_blank" rel="noopener">objc2-web-kit</a> <span class="tp-ver">0.3.2</span></li>
+    <li><a href="https://github.com/Lokathor/tinyvec" target="_blank" rel="noopener">tinyvec</a> <span class="tp-ver">1.13.3</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MIT/Apache-2.0</span><span class="tp-count">7 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/bitflags/bitflags" target="_blank" rel="noopener">bitflags</a> <span class="tp-ver">1.3.2</span></li>
+    <li><a href="https://github.com/Nullus157/bs58-rs" target="_blank" rel="noopener">bs58</a> <span class="tp-ver">0.5.1</span></li>
+    <li><a href="https://github.com/sfackler/rust-fallible-iterator" target="_blank" rel="noopener">fallible-iterator</a> <span class="tp-ver">0.3.0</span></li>
+    <li><a href="https://github.com/sfackler/fallible-streaming-iterator" target="_blank" rel="noopener">fallible-streaming-iterator</a> <span class="tp-ver">0.1.9</span></li>
+    <li><a href="https://github.com/TedDriggs/ident_case" target="_blank" rel="noopener">ident_case</a> <span class="tp-ver">1.0.1</span></li>
+    <li><a href="https://github.com/idubrov/json-patch" target="_blank" rel="noopener">json-patch</a> <span class="tp-ver">4.2.0</span></li>
+    <li><a href="https://github.com/nox/serde_urlencoded" target="_blank" rel="noopener">serde_urlencoded</a> <span class="tp-ver">0.7.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MPL-2.0</span><span class="tp-count">5 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/servo/rust-cssparser" target="_blank" rel="noopener">cssparser</a> <span class="tp-ver">0.37.0</span></li>
+    <li><a href="https://github.com/servo/rust-cssparser" target="_blank" rel="noopener">cssparser-macros</a> <span class="tp-ver">0.7.1</span></li>
+    <li><a href="https://github.com/upsuper/dtoa-short" target="_blank" rel="noopener">dtoa-short</a> <span class="tp-ver">0.3.5</span></li>
+    <li><a href="https://github.com/soc/option-ext" target="_blank" rel="noopener">option-ext</a> <span class="tp-ver">0.2.0</span></li>
+    <li><a href="https://github.com/servo/stylo" target="_blank" rel="noopener">selectors</a> <span class="tp-ver">0.38.0</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0</span><span class="tp-count">4 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener">rmcp</a> <span class="tp-ver">3.6.0</span></li>
+    <li><a href="https://github.com/modelcontextprotocol/rust-sdk" target="_blank" rel="noopener">rmcp-macros</a> <span class="tp-ver">3.6.0</span></li>
+    <li><a href="https://github.com/Actyx/sync_wrapper" target="_blank" rel="noopener">sync_wrapper</a> <span class="tp-ver">1.0.2</span></li>
+    <li><a href="https://github.com/tauri-apps/tao" target="_blank" rel="noopener">tao</a> <span class="tp-ver">0.37.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Zlib</span><span class="tp-count">3 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/orlp/foldhash" target="_blank" rel="noopener">foldhash</a> <span class="tp-ver">0.1.5</span></li>
+    <li><a href="https://github.com/orlp/foldhash" target="_blank" rel="noopener">foldhash</a> <span class="tp-ver">0.2.0</span></li>
+    <li><a href="https://github.com/trifectatechfoundation/zlib-rs" target="_blank" rel="noopener">zlib-rs</a> <span class="tp-ver">0.6.8</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">(MIT OR Apache-2.0) AND Unicode-3.0</span><span class="tp-count">2 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/dtolnay/unicode-ident" target="_blank" rel="noopener">unicode-ident</a> <span class="tp-ver">1.0.27</span></li>
+    <li><a href="https://github.com/unicode-rs/unicode-normalization" target="_blank" rel="noopener">unicode-normalization</a> <span class="tp-ver">0.1.26</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">BSD-2-Clause OR Apache-2.0 OR MIT</span><span class="tp-count">2 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/google/zerocopy" target="_blank" rel="noopener">zerocopy</a> <span class="tp-ver">0.8.63</span></li>
+    <li><a href="https://github.com/google/zerocopy" target="_blank" rel="noopener">zerocopy-derive</a> <span class="tp-ver">0.8.63</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">BSD-3-Clause</span><span class="tp-count">2 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/dropbox/rust-alloc-no-stdlib" target="_blank" rel="noopener">alloc-no-stdlib</a> <span class="tp-ver">3.0.0</span></li>
+    <li><a href="https://github.com/dropbox/rust-alloc-no-stdlib" target="_blank" rel="noopener">alloc-stdlib</a> <span class="tp-ver">0.3.0</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MIT OR Zlib OR Apache-2.0</span><span class="tp-count">2 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide" target="_blank" rel="noopener">miniz_oxide</a> <span class="tp-ver">0.8.9</span></li>
+    <li><a href="https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide" target="_blank" rel="noopener">miniz_oxide</a> <span class="tp-ver">0.9.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Unlicense/MIT</span><span class="tp-count">2 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/BurntSushi/same-file" target="_blank" rel="noopener">same-file</a> <span class="tp-ver">1.0.6</span></li>
+    <li><a href="https://github.com/BurntSushi/walkdir" target="_blank" rel="noopener">walkdir</a> <span class="tp-ver">2.5.0</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">0BSD OR MIT OR Apache-2.0</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/oyvindln/adler2" target="_blank" rel="noopener">adler2</a> <span class="tp-ver">2.0.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0 / MIT</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/servo/rust-fnv" target="_blank" rel="noopener">fnv</a> <span class="tp-ver">1.0.7</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0 AND MIT</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/rust-windowing/winit" target="_blank" rel="noopener">dpi</a> <span class="tp-ver">0.1.2</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0 OR BSL-1.0</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/dtolnay/ryu" target="_blank" rel="noopener">ryu</a> <span class="tp-ver">1.0.23</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/bytecodealliance/wasi" target="_blank" rel="noopener">wasi</a> <span class="tp-ver">0.11.1+wasi-snapshot-preview1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">BSD-3-Clause AND MIT</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/dropbox/rust-brotli" target="_blank" rel="noopener">brotli</a> <span class="tp-ver">9.0.0</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">BSD-3-Clause/MIT</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/dropbox/rust-brotli-decompressor" target="_blank" rel="noopener">brotli-decompressor</a> <span class="tp-ver">6.0.1</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">CC0-1.0 OR MIT-0 OR Apache-2.0</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://gitlab.com/kornelski/dunce" target="_blank" rel="noopener">dunce</a> <span class="tp-ver">1.0.5</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MIT OR Apache-2.0 OR LGPL-2.1-or-later</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/r-efi/r-efi" target="_blank" rel="noopener">r-efi</a> <span class="tp-ver">5.3.0</span></li>
+  </ul>
+</details>
+<details class="tp">
+  <summary><span class="tp-lic">MIT OR Apache-2.0 OR Zlib</span><span class="tp-count">1 個</span></summary>
+  <ul class="tp-list">
+    <li><a href="https://github.com/rust-windowing/raw-window-handle" target="_blank" rel="noopener">raw-window-handle</a> <span class="tp-ver">0.6.2</span></li>
+  </ul>
+</details>
+  </section>
+  </div>
+</div>
+</main>
+
+<footer class="gut">
+  <div class="wrap">
+    <div><a href="privacy.html">プライバシーポリシー</a><a href="licenses.html">使っている部品のライセンス</a><a href="https://github.com/uzusio/uzu-ai-koubou/releases" target="_blank" rel="noopener">変わったこと（リリースノート）</a></div>
+    <p>作った人：天羽うずしお丸</p>
+  </div>
+</footer>
+
+</body>
+</html>

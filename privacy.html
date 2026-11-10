@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー｜うずAI工房</title>
+<meta name="description" content="うずAI工房（YouTube チャンネルを運営する人のための Windows アプリ）が、どんな情報を、どこで、どう扱うかの説明です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800;900&family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@600;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="img/icon.png">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+
+<header class="gut">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="img/icon.png" alt="">うずAI工房</a>
+    <nav class="top" aria-label="ページ">
+      <a href="index.html">ホーム</a>
+      <a href="privacy.html" aria-current="page">プライバシーポリシー</a>
+      <a href="licenses.html">ライセンス</a>
+      <a class="get" href="index.html#download">ダウンロード</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="docpage gut">
+  <div class="wrap"><div class="doc">
+    <section>
+      <h1>プライバシーポリシー</h1>
+      <p class="updated">最終更新：<span id="updated-date">2026 年 11 月 10 日</span></p>
+      <p>うずAI工房（以下「このアプリ」）は、天羽うずしお丸が作る Windows のアプリです。このページは、このアプリがどんな情報を、どこで、どう扱うかを説明します。</p>
+    </section>
+    <section>
+      <h2>1. 私たちが受け取る情報</h2>
+      <p>私たち（作者）は、このアプリを通じてあなたの情報を受け取りません。このアプリは私たちのサーバーと通信せず、使い方の統計や不具合の報告を自動で送ることもしません。</p>
+    </section>
+    <section>
+      <h2>2. あなたの PC の中に置く情報</h2>
+      <ul>
+        <li><b>YouTube から読んだ情報</b>：チャンネル・動画・再生リスト・分析の数字。あなたの PC の中（<code>%APPDATA%\channel-steward</code>）だけに置きます。YouTube の規約に従い、取ってから 30 日以内に取り直すか消します。</li>
+        <li><b>YouTube の許可（リフレッシュトークン）</b>：Windows の資格情報マネージャーに置きます。画面・ログ・データベースには出しません。</li>
+        <li><b>あなたが入れた情報</b>：目標・答えた質問・プラン・作業の記録。</li>
+        <li><b>録画と書き出した動画</b>：あなたが選んだフォルダにあります。録画は読むだけで、書き換えも削除もしません。</li>
+      </ul>
+      <p>アンインストールのときに「アプリのデータを削除」を選ぶと、上の情報（書き出した動画を除く）を消します。</p>
+    </section>
+    <section>
+      <h2>3. Google（YouTube）の情報の扱い</h2>
+      <p>このアプリは、YouTube API サービスを使っています。このアプリで YouTube に接続すると、<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube の利用規約</a>に同意したことになります。Google が情報をどう扱うかは、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a>をご覧ください。</p>
+      <p>このアプリに出した許可は、<a href="https://security.google.com/settings/security/permissions" target="_blank" rel="noopener">Google のセキュリティ設定のページ</a>からいつでも取り消せます。</p>
+      <p>このアプリは、Google の OAuth であなたの許可を得て、次の範囲で YouTube を使います。</p>
+      <ul>
+        <li><code>youtube</code>：動画・再生リストを読み、あなたが承認した変更（題名・概要欄・タグ・再生リスト・アップロード）を書き込むため。</li>
+        <li><code>yt-analytics.readonly</code>：チャンネルの分析の数字を読み、提案に使うため。</li>
+      </ul>
+      <p><b>Google API から受け取った情報の使用と、他のアプリへの転送は、限定的使用の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API サービスのユーザーデータに関するポリシー</a> に従います。</b></p>
+      <p class="policy-en">うずAI工房's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </section>
+    <section>
+      <h2>4. AI に渡す情報</h2>
+      <p>あなたが AI の機能（マネージャーの提案・題名の案・場面選び・相談）を使うと、このアプリは、あなたの PC に入っている AI（Claude Code または Codex）に、必要なチャンネルの情報や文字起こしを渡します。AI はあなたの契約で動き、その情報は AI の提供元（Anthropic または OpenAI）に送られ、提供元の規約とプライバシーポリシーに従って扱われます。私たちはその情報を受け取りません。</p>
+      <p>AI に情報を渡すのは、あなたがアプリの中で使う AI を選び、AI の機能を使ったときだけです。このアプリも作者も、YouTube から読んだ情報を AI の学習に使いません。AI の提供元が会話を学習に使うかどうかは、あなたの契約と設定で決まります。気になる場合は、提供元の設定を確かめてください。</p>
+    </section>
+    <section>
+      <h2>5. インターネットから取ってくるもの</h2>
+      <p>初めて使うときなどに、次の配布元から部品を取ってきます。そのとき配布元には、あなたの IP アドレスなど、通常のダウンロードと同じ情報が伝わります。</p>
+      <ul>
+        <li>Python（文字起こしの部品を動かすため）：GitHub</li>
+        <li>文字起こしの部品：Python Package Index（PyPI）</li>
+        <li>文字起こしのモデル：Hugging Face</li>
+        <li>動画の道具（ffmpeg）：GitHub</li>
+      </ul>
+    </section>
+    <section>
+      <h2>6. お問い合わせ</h2>
+      <p>このポリシーやアプリについてのお問い合わせ・苦情は、メールでお送りください。</p>
+      <p><code>uzusio6646@gmail.com</code></p>
+    </section>
+    <section>
+      <h2>7. 変更</h2>
+      <p>このポリシーを変えたときは、このページを更新し、最終更新の日付を改めます。</p>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<footer class="gut">
+  <div class="wrap">
+    <div><a href="privacy.html">プライバシーポリシー</a><a href="licenses.html">使っている部品のライセンス</a><a href="https://github.com/uzusio/uzu-ai-koubou/releases" target="_blank" rel="noopener">変わったこと（リリースノート）</a></div>
+    <p>作った人：天羽うずしお丸</p>
+  </div>
+</footer>
+
+</body>
+</html>
